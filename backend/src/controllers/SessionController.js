@@ -1,23 +1,23 @@
 const User = require('../models/User')
 
 module.exports = {
-    index() { },
+	index() { },
 
-    show() { },
-    
-    async store(request, response) { 
-        const { email } =  request.body;
+	show() { },
 
-        let user = await User.findOne({ email });
+	async store(request, response) {
+		const { email } = request.body;
 
-        if (!user) {
-            user = await User.create({ email });
-        }        
+		let user = await User.findOne({ email });
 
-        return response.json(user);
-    },
-    
-    update() { },
-    
-    destroy() { }
+		if (!user) {
+			user = await User.create({ email });
+		}
+
+		return response.json(user);
+	},
+
+	update() { },
+
+	destroy() { }
 };

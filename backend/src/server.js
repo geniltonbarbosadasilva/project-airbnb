@@ -12,7 +12,7 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
-mongoose.connect('mongodb+srv://rocketseat:omnistack@rocketseat.ah7rs.mongodb.net/omnistack?retryWrites=true&w=majority', {
+mongoose.connect('uri mongo db', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });

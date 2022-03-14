@@ -12,7 +12,9 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
-mongoose.connect('uri mongo db', {
+const mongoUri = require('./config/mongo');
+
+mongoose.connect( mongoUri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
